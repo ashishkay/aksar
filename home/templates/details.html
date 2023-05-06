@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.first_name }} {{ mymember.last_name }}
+{% endblock %}
+
+
+{% block content %}
+<p><a href="/">HOME</a></p>
+
+<p>Here are the lists of Blood donated details:</p>
+<h1>Blood Group: {{ mymember.blood_group }}</h1>
+
+<h2>{{ mymember.first_name }} {{ mymember.last_name }}</h2>
+<p>Age: {{ mymember.age }}</p>
+<p>Phone: {{ mymember.phone }}</p>
+<p>Address: {{ mymember.address }}</p>
+<p>Volume of Blood donated(oz): {{ mymember.volume_donated }}</p>
+<p>Blood donated date: {{ mymember.Donated_date }}</p>
+
+<p>Back to <a href="/donation">Donations</a></p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Blood Bank Management
+{% endblock %}
+
+
+{% block content %}
+ <p><a href="/">HOME</a></p>
+<h1>Blood Donor</h1>
+<p>Here are the lists of Blood Donor:</p>
+<ul>
+  {% for x in mymembers %}
+    <li> {{ x.id }}. <a href="details/{{ x.id }}">{{ x.first_name }} {{ x.last_name }}</a> :  {{ x.blood_group }} </li>
+
+  {% endfor %}
+</ul>
+{% endblock %}
